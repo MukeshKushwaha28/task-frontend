@@ -35,7 +35,8 @@ const Create1 = ({handle}) => {
   const [description, setDescription] = useState();
   const [category, setCategory] = useState();
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     if (!title || !description || !category) {
       toast({
         title: "Please Fill all the Feilds",
@@ -133,7 +134,7 @@ const Create1 = ({handle}) => {
               <Button colorScheme="blue" mr={3} onClick={onClose}>
                 close
               </Button>
-              <Button colorScheme="blue" mr={3} onClick={handleSubmit}>
+              <Button colorScheme="blue" mr={3} onClick={(e)=>{handleSubmit(e)}}>
                 Create
               </Button>
             </ModalFooter>

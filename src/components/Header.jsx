@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuth } from "../store/auth";
 import { NavLink, Link } from "react-router-dom";
+import {Text} from "@chakra-ui/react"
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -20,6 +21,8 @@ const Header = () => {
           <a class="navbar-brand" href="#">
           
           </a>
+
+          <Text color={"white"} align={"left"}  fontSize={"20px"} fontWeight={"bold"} mt={[5]} mr={[5]}>TaskManager</Text>
           <button
             class="navbar-toggler"
             type="button"
@@ -29,9 +32,14 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+
+      
+            <span class="navbar-toggler-icon">
+            </span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
+
+            
             <ul class="navbar-nav">
               {/* <li class="nav-item" className="hover">
                 <Link class="nav-link active" aria-current="page" to="/drag" style={{fontSize:"1.3rem"}}>

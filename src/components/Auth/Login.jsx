@@ -23,8 +23,8 @@ const Login = () => {
   const [password, setPassword] = useState();
 
   // console.log(name)
-  const handleSubmit = async () => {
-    // e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     if (!password || !email) {
       toast({
         title: "Please Fill all the Feilds",
@@ -81,7 +81,7 @@ const Login = () => {
         status: "error",
         duration: 5000,
         isClosable: true,
-        position: "bottom",
+        position: "top",
       });
     }
   };
@@ -90,21 +90,28 @@ const Login = () => {
     <Header/>
       <Flex
         minW={"100vw"}
-        minH={"100vh"}
+        minH={"90vh"}
         border={"1px solid black"}
         backgroundColor={"rgb(2, 2, 36,1)"}
         align={"center"}
         justify={"center"}
+        className="form"
+        pb={[110,20]}
       >
         <FormControl
-          className="form"
-          w={"400px"}
-          h={"400px"}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          flexDirection={"column"}
+          // className="form"
+          w={[400,400]}
+          h={[300,400]}
           border={"1px solid white"}
           borderRadius={"10px"}
           p={"10px"}
-          pt={"60px"}
+          pt={"30px"}
           backgroundColor={" background-color: rgb(2, 2, 36,.2)"}
+          
         >
           <Input
             type="email"
@@ -113,6 +120,7 @@ const Login = () => {
             mb={"30px"}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
           <Input
             type="password"
@@ -120,9 +128,10 @@ const Login = () => {
             color={"white"}
             mb={"30px"}
             value={password}
+            required
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Button w={"200px"} backgroundColor={"orange"} onClick={handleSubmit}>
+          <Button w={"200px"} backgroundColor={"blue"} color={"white"} onClick={(e)=>{handleSubmit(e)}}>
             Login
           </Button>
         </FormControl>

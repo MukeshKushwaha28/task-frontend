@@ -23,8 +23,8 @@ const Register = () => {
   const [password, setPassword] = useState();
 
   // console.log(name)
-  const handleSubmit = async () => {
-    // e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     if (!name || !email) {
       toast({
         title: "Please Fill all the Feilds",
@@ -68,14 +68,19 @@ const Register = () => {
       <ToastContainer />
       <Flex
         minW={"100vw"}
-        minH={"100vh"}
+        minH={"85vh"}
         border={"1px solid black"}
         backgroundColor={"rgb(2, 2, 36,1)"}
         align={"center"}
         justify={"center"}
+        className={"form"}
       >
         <FormControl
-          className="form"
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        flexDirection={"column"}
+          // className="form"
           w={"400px"}
           h={"400px"}
           border={"1px solid white"}
@@ -83,6 +88,7 @@ const Register = () => {
           p={"10px"}
           pt={"30px"}
           backgroundColor={" background-color: rgb(2, 2, 36,.2)"}
+          // mb={[40,120]}
         >
           <Input
             type="text"
@@ -91,6 +97,7 @@ const Register = () => {
             mb={"30px"}
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
           />
           <Input
             type="email"
@@ -99,6 +106,7 @@ const Register = () => {
             mb={"30px"}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
           <Input
             type="password"
@@ -106,9 +114,10 @@ const Register = () => {
             color={"white"}
             mb={"30px"}
             value={password}
+            required
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Button w={"200px"} backgroundColor={"orange"} onClick={handleSubmit}>
+          <Button w={"200px"} backgroundColor={"blue"} color={"white"} onClick={(e)=>{handleSubmit(e)}}>
             Register
           </Button>
         </FormControl>

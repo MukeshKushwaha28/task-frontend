@@ -35,8 +35,9 @@ const Update = ({_id,handle}) => {
   const [title, setTitle] = useState();
   const [description, setDescription] = useState();
   const [category, setCategory] = useState();
-
-  const handleSubmit = async () => {
+ 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     if (!title || !description || !category) {
       toast({
         title: "Please Fill all the Feilds",
@@ -56,6 +57,8 @@ const Update = ({_id,handle}) => {
           category,
         }
       );
+
+      // console.log(data);
 
       if (data.data) {
         handle();
@@ -128,7 +131,7 @@ const Update = ({_id,handle}) => {
               <Button colorScheme="blue" mr={3} onClick={onClose}>
                 close
               </Button>
-              <Button colorScheme="blue" mr={3} onClick={handleSubmit}>
+              <Button colorScheme="blue" mr={3} onClick={(e)=>{handleSubmit(e)}}>
                 update
               </Button>
             </ModalFooter>

@@ -54,7 +54,7 @@ const Sidebar = () => {
         <Text cursor={"pointer"} className="text" color="white" fontSize={"1.2rem"} mb={[5]} onClick={handle1}><Box mt={[1.5]} mr={[2]}><GrTask color="white"  onClick={handle1}/></Box> Completed task</Text>
         <Text cursor={"pointer"} className="text" color="white" fontSize={"1.2rem"} mb={[5]} ml={[3]} onClick={handle2}><Box mt={[1.5]} mr={[2]}><BiTaskX color="white" size={"25px"} onClick={handle2}/></Box>InComplete task</Text>
         <Text cursor={"pointer"} className="text" color="white" fontSize={"1.2rem"} onClick={handle3}><Box mt={[1.5]} mr={[2]}><GrTasks color="white"  onClick={handle3}/></Box>InProgress task</Text>
-        <Text cursor={"pointer"} className="text" color="white" fontSize={"1.2rem"} onClick={handle4}><Box mt={[1.5]} mr={[2]}><GrTasks color="white"  onClick={handle4}/></Box>Drap and drap</Text>
+        <Text cursor={"pointer"} className="text" color="white" fontSize={"1.2rem"} onClick={handle4}><Box mt={[1.5]} mr={[2]}><GrTasks color="white"  onClick={handle4}/></Box>Drag-and-drop</Text>
         </Flex>
       </Box>
     </>
