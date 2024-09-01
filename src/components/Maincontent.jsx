@@ -1,6 +1,6 @@
 import React ,{useState,useEffect}from "react";
 import { Box ,Text} from "@chakra-ui/react";
-import "../style/Maincontent.css";
+import '../style/Maincontent.css'
 import Card1 from "./Card1";
 import { Flex } from "@chakra-ui/react";
 import Create from "./Create";
