@@ -36,6 +36,18 @@ const Register = () => {
        return;
     }
 
+    if (!email.includes('@gmail.com')) {
+      toast({
+        title: "Please write correct Email include @gmail.com",
+        status: "warning",
+        duration: 5000,
+        isClosable: true,
+        position: "top",
+      });
+       return;
+    }
+  
+
     try {
       const data = await axios.post(
         "https://backend-task-bwtw.onrender.com/api/v1/auth/register",
