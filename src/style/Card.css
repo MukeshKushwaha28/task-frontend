@@ -1,0 +1,14 @@
+.Card2{
+    background-color:  rgba(76, 76, 79, 0.4);
+
+    transition: 1s;
+    color: white;
+}
+
+.Card2:hover{
+    background-color: rgba(66, 66, 67, 0.3);
+}
+
+.button{
+    background-color: rgba(250, 130, 130, 0.5);
+}

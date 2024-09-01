@@ -1,0 +1,13 @@
+.sidebar{
+    background-color: rgb(2, 2, 36,.8);
+    transition: 1s;
+}
+
+.sidebar:hover{
+    background-color: rgb(2, 2, 36,.7);
+}
+
+
+.text{
+    display: flex;
+}
