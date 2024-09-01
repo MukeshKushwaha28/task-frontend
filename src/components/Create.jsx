@@ -62,6 +62,7 @@ const Create = ({handle}) => {
           position: "top",
         });
         console.log(data.data);
+        onClose();
       } else {
         console.log("data not present");
       }

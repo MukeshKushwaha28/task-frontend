@@ -3,6 +3,7 @@ import { Box, Flex, Button } from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
 import { useAuth } from "../../store/auth";
 import Header from "../Header";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import {
   FormControl,
@@ -15,6 +16,7 @@ import {
 import "../../style/Login.css";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [auth, setAuth] = useAuth();
   const toast = useToast();
   const [email, setEmail] = useState();
@@ -69,6 +71,8 @@ const Login = () => {
           position: "top",
         });
         // console.log(data);
+
+        navigate("/dashboard/home")
       }
     } catch (error) {
       toast({
