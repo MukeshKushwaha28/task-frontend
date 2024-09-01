@@ -1,6 +1,7 @@
 Task Management Dashboard
 Project Overview
 This Task Management Dashboard is a full-stack application designed to help users manage their tasks efficiently. The project includes a responsive, user-friendly interface with features like task categorization, drag-and-drop functionality, and form validation. The backend, built with Node.js, Express.js, and MongoDB, handles all CRUD operations securely, following RESTful principles.
+Deployed link - https://task-frontend-kohl.vercel.app/
 
 Features
 Responsive UI/UX: Clean and intuitive design with drag-and-drop functionality for task organization.
@@ -36,3 +37,6 @@ npm run dev
 
 step 5
 Open your browser and navigate to http://localhost:3000 to see the dashboard in action.
+
+
+
