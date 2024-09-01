@@ -11,6 +11,7 @@ import {
   FormErrorMessage,
   Input,
   FormHelperText,
+  Heading
 } from "@chakra-ui/react";
 
 import "../../style/Login.css";
@@ -33,6 +34,8 @@ const Login = () => {
         isClosable: true,
         position: "top",
       });
+
+      return
     }
 
     try {
@@ -91,29 +94,21 @@ const Login = () => {
       <Flex
         minW={"100vw"}
         minH={"90vh"}
-        border={"1px solid black"}
+        // border={"1px solid black"}
         backgroundColor={"rgb(2, 2, 36,1)"}
-        align={"center"}
-        justify={"center"}
-        className="form"
-        pb={[110,20]}
+        // align={"center"}
+        // justify={"center"}
+        // className="form"
+        // pb={[110,20]}
       >
-        <FormControl
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          flexDirection={"column"}
-          // className="form"
-          w={[400,400]}
-          h={[300,400]}
-          border={"1px solid white"}
-          borderRadius={"10px"}
-          p={"10px"}
-          pt={"30px"}
-          backgroundColor={" background-color: rgb(2, 2, 36,.2)"}
-          
-        >
-          <Input
+       
+       
+        
+        <form id="form1">
+
+          <h1>Login</h1>
+           <hr />
+          <input
             type="email"
             placeholder="Enter email"
             color={"white"}
@@ -122,7 +117,7 @@ const Login = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <Input
+          <input
             type="password"
             placeholder="Enter password"
             color={"white"}
@@ -131,10 +126,10 @@ const Login = () => {
             required
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Button w={"200px"} backgroundColor={"blue"} color={"white"} onClick={(e)=>{handleSubmit(e)}}>
+          <Button w={"200px"} backgroundColor={"blue"} color={"white"} _hover={{ backgroundColor:"blue" }} onClick={(e)=>{handleSubmit(e)}}>
             Login
           </Button>
-        </FormControl>
+        </form>
       </Flex>
     </>
   );

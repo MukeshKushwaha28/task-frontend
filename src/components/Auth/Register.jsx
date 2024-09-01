@@ -33,6 +33,7 @@ const Register = () => {
         isClosable: true,
         position: "top",
       });
+       return;
     }
 
     try {
@@ -44,10 +45,8 @@ const Register = () => {
           password,
         }
       );
-
-      if (data.data) {
-
-        navigate("/")
+       console.log(data.data);
+      if (data.data) { 
         toast({
           title: "User register Successful",
           status: "success",
@@ -55,6 +54,7 @@ const Register = () => {
           isClosable: true,
           position: "top",
         });
+        navigate("/")
       } else {
         console.log("data not present");
       }
@@ -75,7 +75,8 @@ const Register = () => {
         justify={"center"}
         className={"form"}
       >
-        <FormControl
+        <form
+        id="form1"
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
@@ -90,7 +91,8 @@ const Register = () => {
           backgroundColor={" background-color: rgb(2, 2, 36,.2)"}
           // mb={[40,120]}
         >
-          <Input
+          <h1>Register</h1>
+          <input
             type="text"
             placeholder="Enter name"
             color={"white"}
@@ -99,7 +101,7 @@ const Register = () => {
             onChange={(e) => setName(e.target.value)}
             required
           />
-          <Input
+          <input
             type="email"
             placeholder="Enter email"
             color={"white"}
@@ -108,7 +110,7 @@ const Register = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <Input
+          <input
             type="password"
             placeholder="Enter password"
             color={"white"}
@@ -117,10 +119,10 @@ const Register = () => {
             required
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Button w={"200px"} backgroundColor={"blue"} color={"white"} onClick={(e)=>{handleSubmit(e)}}>
+          <Button _hover={{ backgroundColor:"blue" }} w={"200px"} backgroundColor={"blue"} color={"white"} onClick={(e)=>{handleSubmit(e)}}>
             Register
           </Button>
-        </FormControl>
+        </form>
       </Flex>
     </>
   );
