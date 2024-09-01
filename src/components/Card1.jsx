@@ -50,15 +50,15 @@ const Card1 = ({item,handle}) => {
     <>
       <Card
         className="Card2"
-        height={[200, 200]}
-        width={[300, 300]}
+        height={[300, 200]}
+        width={[400, 400]}
         border={"1px solid white"}
         color={"white"}
         background={"rgba(76, 76, 79, 0.4)"}
         m={[2, 5, 5, 5]}
         overflow={"hidden"}
       >
-        <CardHeader>
+        {/* <CardHeader>
           <Flex spacing="4">
             <Flex flex="1"  alignItems="center" flexWrap="wrap">
               <Box>
@@ -66,9 +66,10 @@ const Card1 = ({item,handle}) => {
               </Box>
             </Flex>
           </Flex>
-        </CardHeader>
+        </CardHeader> */}
         <CardBody position={"relative"}>
-          <Text fontSize={"15px"}>
+          <Heading>{item.title}</Heading>
+          <Text fontSize={"15px"} overflow={"scoll"}>
             {item.description}
           </Text>
 

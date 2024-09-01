@@ -34,8 +34,8 @@ const Header = () => {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               {/* <li class="nav-item" className="hover">
-                <Link class="nav-link active" aria-current="page" to="/" style={{fontSize:"1.3rem"}}>
-                  Home
+                <Link class="nav-link active" aria-current="page" to="/drag" style={{fontSize:"1.3rem"}}>
+                  Drag
                 </Link>
               </li> */}
               
@@ -81,6 +81,16 @@ const Header = () => {
                           className="dropdown-item"
                         >
                           Logout
+                        </NavLink>
+                      </li>
+
+                      <li>
+                        <NavLink
+                          // onClick={handleLogout}
+                          to="/dashboard/drag"
+                          className="dropdown-item"
+                        >
+                          Drag
                         </NavLink>
                       </li>
                     </ul>

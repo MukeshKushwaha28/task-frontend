@@ -4,6 +4,7 @@ import Home from "./Home";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
 import PrivateRoute from "./components/Routes/Private";
+import DragDropExample from "./components/pages/DragDropExample";
 import "./App.css";
 
 const App = () => {
@@ -12,9 +13,11 @@ const App = () => {
       <Routes>
         <Route path="/dashboard" element={<PrivateRoute />}>
            <Route path="home" element={<Home />} />
+           <Route path="drag" element={<DragDropExample />} />
         </Route>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
       </Routes>
     </>
   );
