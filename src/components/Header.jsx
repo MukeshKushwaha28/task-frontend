@@ -42,7 +42,7 @@ const Header = () => {
               {!auth?.user ? (
                 <>
                   <li className="nav-item" class="hover">
-                    <Link to="http://localhost:5173/register" className="nav-link" style={{fontSize:"1.3rem"}}>
+                    <Link to="/register" className="nav-link" style={{fontSize:"1.3rem"}}>
                       Register
                     </Link>
                   </li>
