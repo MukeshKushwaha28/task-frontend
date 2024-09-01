@@ -1,6 +1,5 @@
 import React ,{useState,useEffect}from "react";
 import { Box ,Text} from "@chakra-ui/react";
-import '../style/Maincontent.css'
 import Card1 from "./Card1";
 import { Flex } from "@chakra-ui/react";
 import Create from "./Create";
@@ -8,6 +7,7 @@ import Create1 from "./Create1";
 import Alltask from "./pages/Alltask";
 import axios from "axios";
 import TaskbaseOncat from "./pages/TaskbaseOncat";
+import '../style/MainContent.css'
 
 const Maincontent = () => {
   //  const [task,setTask] = useState();
